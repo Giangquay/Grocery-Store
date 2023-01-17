@@ -1,5 +1,5 @@
 <?php
-
+https://github.com/Giangquay/PHP-grocery_store-.git
 include 'config.php';
  $name="";
  $email="";
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     $image_tmp_name = $_FILES['image']['tmp_name'];
     $image_extension=explode('.',$image_name);
     $image_extension=strtolower(end($image_extension));
-    $image_folder = "uploads_img/${image_name}";
+    $image_folder = "uploads_img/".$image_name;
     //tester input
     $select = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
    $select->execute([$email]);
